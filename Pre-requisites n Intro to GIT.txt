@@ -1,0 +1,71 @@
+Create a PAT [Personal Access Token]:
+--> Go to your Github profile
+--> Go to profile setting
+--> Go to Developer settings 
+--> Generate token (classic)
+--> Give a note to remember if accessed later on.
+--> Once created, mail the PAT to yourself (optional - for storing it only)
+
+Organize files and folders
+Cloning a repo
+Imp GIT commands
+
+ ----------------------------------------------------------------------------
+ 
+App installation:
+Note: Prefer community editiom
+
+1. VS CODE
+Download link: https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
+
+2. Git
+Download link: https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.1/Git-2.50.0-64-bit.exe
+
+3. Notepad++
+ Download link: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8/npp.8.8.Installer.x64.exe
+
+4. Python v3.13.5
+Download link: https://www.python.org/ftp/python/3.13.5/python-3.13.5-amd64.exe
+
+-----------------------------------------------------------------------------------------------------------------
+
+I. Organize files and folders
+--> Create a folder named Software to hold installer files of all softwares used.
+--> Create a folder named Learning to hold all files, py files etc
+
+II. Git Configuration;
+-->  git config --global user.name "{git account name}"
+-->  git config --global user.email "{git account email}"
+
+III. Cloning a repo:
+--> git clone {repo link}
+        repo link syntax : https:// domain name / author name / repo name
+		Ex: https://github.com/TharunKrishnaP/SIC_PU_June2025
+		  
+By running the clone command, we get a copy of the repo in our system.
+To use the PAT in the clone command,
+Syntax: https://PAT@github.com/TharunKrishnaP/SIC_PU_June2025
+
+PAT will reduce the need of authenticating again and again
+
+git clone https://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@github.com/TharunKrishnaP/SIC_PU_June2025
+
+IV. Imp GIT Commands:
+To update my remote repo w.r.t local repo:
+1. Let git create a list of files to be updated [Staging]
+2. commit will create objects which are softcopies. Those objects will store the files that need to be updated. Hard copy is present in local repo
+3. When given push, those objects are sent to the server via internet.
+Only push operation requires internet
+
+1. status  2. commit  3. restore 4.push
+
+--> git status
+--> git commit -m "{note}"
+--> git push origin main
+
+Git is a multiple thread language.
+
+
+If you're giving git command to update file:
+--> Diff folder : git add {path}
+--> Same folder : git add .
