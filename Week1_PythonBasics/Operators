@@ -1,0 +1,46 @@
+Memory - Primary | secondary
+Secondary - HDD / SSD
+RAM
+Cache, buffers, Registers
+buffers - Unbuffered / Line buffer / User customized, delimited buffers
+Registers - General / Special purpose 
+            SPECIAL PURPOSE - MDR, MAR, SP, PC, IR, Accumulator
+
+Arithmetic operators:
+
++ - * / // ** --> Binary operators
++ and - have low precedence
+** , //, /, * have high precedence
+
+All operations folllows from left to right except exponent
+Exponent follows from right to left
+
+2 + 5 + 9 - 11 + 13
+= 7 + 9 - 11 + 13
+= 16 - 11 + 13
+= 5 + 13
+= 18
+
+1 ** 2 ** 3 ** 2
+= 1 ** 2 ** 9
+= 1 ** 512
+= 1
+
++ve integers are stored by converting decimal/octal/hexadecimal into binary
+-ve integers are stored by converting it into binary and then to 2s complement
+Float numbers are stoed as per IEEE method
+
+-13 in binary
+13 --> 0000 1101
+1s --> 1111 0010
+       +       1
+2s --> 1111 0011
+
+-13 = 1111 0011
+
+(-1)*2^7 + 2^6 + 2^5 + 2^4 + 2 + 1
+= (-1)*128 + 64  + 32 + 16 + 2 + 1
+= -128 + 64 +32 + 16 + 3
+=-128 + 64 + 32 + 19
+= -64 + 51
+= -13
