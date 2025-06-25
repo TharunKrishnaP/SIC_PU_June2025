@@ -48,8 +48,6 @@ Syntax: https://PAT@github.com/TharunKrishnaP/SIC_PU_June2025
 
 PAT will reduce the need of authenticating again and again
 
-git clone https://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@github.com/TharunKrishnaP/SIC_PU_June2025
-
 IV. Imp GIT Commands:
 To update my remote repo w.r.t local repo:
 1. Let git create a list of files to be updated [Staging]
