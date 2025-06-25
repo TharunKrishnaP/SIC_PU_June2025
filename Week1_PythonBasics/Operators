@@ -5,12 +5,14 @@ Cache, buffers, Registers
 buffers - Unbuffered / Line buffer / User customized, delimited buffers
 Registers - General / Special purpose 
             SPECIAL PURPOSE - MDR, MAR, SP, PC, IR, Accumulator
-
+-----------------------------------------------------------------------------------------
 Arithmetic operators:
 
 + - * / // ** --> Binary operators
 + and - have low precedence
 ** , //, /, * have high precedence
+
+---------------------------------------------------------------------------------------
 
 All operations folllows from left to right except exponent
 Exponent follows from right to left
@@ -26,9 +28,13 @@ Exponent follows from right to left
 = 1 ** 512
 = 1
 
+---------------------------------------------------------------------------------------
+
 +ve integers are stored by converting decimal/octal/hexadecimal into binary
 -ve integers are stored by converting it into binary and then to 2s complement
-Float numbers are stoed as per IEEE method
+Float numbers are stored as per IEEE method
+
+ --------------------------------------------------------------------------------------
 
 -13 in binary
 13 --> 0000 1101
@@ -44,3 +50,17 @@ Float numbers are stoed as per IEEE method
 =-128 + 64 + 32 + 19
 = -64 + 51
 = -13
+
+--------------------------------------------------------------------------------------
+
+Relational Operators 
+< > == != <= >=
+Input - Numbers || Output - Boolean
+<= and >= are called as redundant but are required as they incease readability and also have highest overall precedence. They are simple, readable, maintainability
+
+Open interval - (a,b) - exclude limits
+Closed interval - [a,b] - include limits
+
+(20,30) --> value >20 and value <30
+[20,30] --> value >= 20 and value <= 30
+(20,30] --> value >20 and value <>=30
