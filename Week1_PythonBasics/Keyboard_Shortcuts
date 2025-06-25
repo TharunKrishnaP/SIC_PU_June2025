@@ -10,9 +10,6 @@ Ctrl + Right/Left - Move the cursor by next/previous word
 ------------------------------------------------------------------------------
 Alt + Tab - Switch b/w recent tabs
 ------------------------------------------------------------------------------
-Ctrl + U - Change case of selected word into lowercase
-Ctrl + Shift + U - Change case of selected word into UPPERCASE
-------------------------------------------------------------------------------
 Cursor : 
 Single click - Place the cursor
 Double click - Select the word

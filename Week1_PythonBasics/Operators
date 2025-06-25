@@ -64,3 +64,9 @@ Closed interval - [a,b] - include limits
 (20,30) --> value >20 and value <30
 [20,30] --> value >= 20 and value <= 30
 (20,30] --> value >20 and value <>=30
+
+-------------------------------------------------------------------------------------
+
+str input()
+str input(str)
+NOTE: There is no function overloading in Python
