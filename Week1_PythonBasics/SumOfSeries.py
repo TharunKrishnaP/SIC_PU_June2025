@@ -3,9 +3,9 @@ n = int(input("Value of n: "))
 m = int(input("No of terms: "))
 sum_of_series = 0
 for i in range(m):
-    term = (n**2**i)/(2*i+1)
-    if i%2==0:
-        sum_of_series += term
-    else:
-        sum_of_series -= term
+    numerator = (n**2**i)
+    denominator = (2*i+1)
+    sign = (-1)**i
+    term = numerator / denominator * sign
+    sum_of_series += term
 print(f"Sum of given series: {sum_of_series}")
