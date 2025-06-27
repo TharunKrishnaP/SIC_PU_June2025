@@ -1,0 +1,7 @@
+Exception_Handling
+
+1. NameError - Occurs when you call a variable which is not yet defined in the program
+2. TypeError - the datatype doesn't match
+3. RecursionError - maximum limit of recursions reached
+4. ZeroDivisionError - Occurs when a number is divided by zero as it is not defined
+5. AttributeError
