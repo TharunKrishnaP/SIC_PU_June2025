@@ -1,0 +1,11 @@
+l1 = [10,5,4,9,2,46,20]
+l1.append(70)
+print("After appending 70: ",l1)
+print(l1.pop())
+print("After pop: ",l1)
+l1.insert(1,11)
+print("After inserting 11 at index 1: ",l1)
+l1.remove(9)
+print("After removing 9: ",l1)
+l1.sort()
+print("After Sort: ",l1)
