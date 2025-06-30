@@ -1,0 +1,20 @@
+Ultimate parent class of Python - Object class
+
+class MyClass:
+    pass
+
+The above code snippet if inherent superclass is not mentioned then it explicitly inherits object class.
+
+class MyClass(object):
+    pass
+
+Methods under Object class:
+
+1. __init__(self) - Acts as constructor to create instances of a class
+2. __new__(cls) - Creates instances
+3. __str__(self) - Used by print() to return string
+4. __repr__(self) - Returns user-friendly string in the console
+5. __eq__(self,other) - Used by == to compare objects
+6. __ne__(self,other) - Used by != to compare objects
+7. __hash__(self) - Generates hash value for instances that can be used in sets or as dictionary keys.
+8. __format__(self,format_specifier) - Controls how objects are formatted by format()
