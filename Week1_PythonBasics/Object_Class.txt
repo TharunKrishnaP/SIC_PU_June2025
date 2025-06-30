@@ -32,3 +32,23 @@ Methods under Object class:
 20. __instancecheck__(self,name) - Used by isinstance() to check whether given instance is present
 
 The object class methods form the basic framework for working of Python language.
+
+In Python, double underscore methods, often called "dunder" methods (short for double underscore), are special
+functions with names that begin and end with double underscores, like __init__, __str__, or __len__.
+They are not called by the user but are triggered by syntax or certain actions.
+
+
+Method	                Triggered By	                        Purpose
+__init__	     Creating an object	             Constructor: Initializes new object properties
+__str__	         str(obj) or print(obj)	         Returns a user-friendly string representation
+__repr__	     repr(obj) or interpreter	     Returns an official string (for debugging)
+__len__	               len(obj)	                 Defines length of an object
+__getitem__	           obj[key]	                 Retrieves an item via indexing
+__setitem__	         obj[key] = value	         Assigns value at a specific index
+__iter__	          for x in obj:	             Makes object iterable
+__next__	           next(obj)	             Gets next item from an iterator
+__add__	              obj1 + obj2	             Defines behavior for addition (+ operator)
+__eq__	              obj1 == obj2	             Equality comparison
+__lt__	              obj1 < obj2	             Less-than comparison
+__call__	             obj()	                 Makes object callable like a function
+__del__	         When object is deleted	         Destructor: Called before object is destroyed
