@@ -1,23 +1,26 @@
 #Boys Girls Height
 t = int(input("Enter no. of test cases: "))
 def height_append(a,b):
-    i = 0
-    j = 0
-    while i<len(a) and j<len(b):
-        if i==0:
+    i = j = k = 0
+    while (i<len(a) or j<len(b)) and k<n:
+        if k==0:
             height_order.append(a[i])
+            k += 1
         else:
             last = height_order[-1]
-            if i%2==0:
-                if last not in a:
-                    if a[i] > last:
-                        height_order.append(a[i])
-                        i += 1
-            elif i%2!=0:
-                if last not in b:
-                    if b[j] > last:
-                        height_order.append(b[j])
-                        j += 1
+            if k%2==0:
+                while i < len(a) and a[i] <= last:
+                    i += 1
+                if i <len(a) and a[i] > last:
+                    height_order.append(a[i])
+                    i += 1
+            elif k%2!=0:
+                while j < len(b) and b[j] <= last:
+                    j += 1
+                if j<len(b) and b[j] > last:
+                    height_order.append(b[j])
+                    j += 1
+            k +=1
 
 for i in range(1,t+1):
     print(f"Test case {i}")
