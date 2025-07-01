@@ -18,9 +18,9 @@ for i in server2:
         deallocated_mem_s2 += abs(i)
 
 print("Server 1")
-print(f"Allocated Memory: {allocated_mem_s1}")
-print(f"De-allocated Memory: {deallocated_mem_s1}")
+print(f"Allocated Memory: {allocated_mem_s1} units")
+print(f"De-allocated Memory: {deallocated_mem_s1} units")
 
 print("Server 2")
-print(f"Allocated Memory: {allocated_mem_s2}")
-print(f"De-allocated Memory: {deallocated_mem_s2}")
+print(f"Allocated Memory: {allocated_mem_s2} units")
+print(f"De-allocated Memory: {deallocated_mem_s2} units")
