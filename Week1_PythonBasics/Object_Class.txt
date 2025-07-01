@@ -1,0 +1,54 @@
+Ultimate parent class of Python - Object class
+
+class MyClass:
+    pass
+
+The above code snippet if inherent superclass is not mentioned then it explicitly inherits object class.
+
+class MyClass(object):
+    pass
+
+Methods under Object class:
+
+1. __init__(self) - Acts as constructor to create instances of a class
+2. __new__(cls) - Allocates memory and creates object
+3. __str__(self) - Used by print() to return string
+4. __repr__(self) - Returns user-friendly string in the console
+5. __eq__(self,other) - Used by == to compare objects
+6. __ne__(self,other) - Used by != to compare objects
+7. __hash__(self) - Generates hash value for instances that can be used in sets or as dictionary keys.
+8. __format__(self,format_specifier) - Controls how objects are formatted by format()
+9. __del__(self) - Acts as destructor to delete an object
+10. __lt__(self,other) - less than
+11. __le__(self,other) - less than or equal to
+12. __gt__(self,others) - greater than
+13. __ge__(self,others) - greater than or equal to
+14. __class__ - Refers to which class the object belongs to
+15. __dir__(object) - Returns the valid attributes of the object
+16. __sizeof__(self) - Returns size of the object in bytes
+17. __getattribute__(self,name) - To access any attributes of the object
+18. __setattr__(self,name) - To assign value to an attribute of an object
+19. __delattr__(self,name) - To delete the attribute using del keyword
+20. __instancecheck__(self,name) - Used by isinstance() to check whether given instance is present
+
+The object class methods form the basic framework for working of Python language.
+
+In Python, double underscore methods, often called "dunder" methods (short for double underscore), are special
+functions with names that begin and end with double underscores, like __init__, __str__, or __len__.
+They are not called by the user but are triggered by syntax or certain actions.
+
+
+Method	                Triggered By	                        Purpose
+__init__	     Creating an object	             Constructor: Initializes new object properties
+__str__	         str(obj) or print(obj)	         Returns a user-friendly string representation
+__repr__	     repr(obj) or interpreter	     Returns an official string (for debugging)
+__len__	               len(obj)	                 Defines length of an object
+__getitem__	           obj[key]	                 Retrieves an item via indexing
+__setitem__	         obj[key] = value	         Assigns value at a specific index
+__iter__	          for x in obj:	             Makes object iterable
+__next__	           next(obj)	             Gets next item from an iterator
+__add__	              obj1 + obj2	             Defines behavior for addition (+ operator)
+__eq__	              obj1 == obj2	             Equality comparison
+__lt__	              obj1 < obj2	             Less-than comparison
+__call__	             obj()	                 Makes object callable like a function
+__del__	         When object is deleted	         Destructor: Called before object is destroyed
