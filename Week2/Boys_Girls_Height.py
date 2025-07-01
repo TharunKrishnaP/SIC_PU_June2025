@@ -21,6 +21,10 @@ def height_append(a,b):
                     height_order.append(b[j])
                     j += 1
             k +=1
+    if len(height_order) == n:
+        print("Yes")
+    else:
+        print("No")
 
 for i in range(1,t+1):
     print(f"Test case {i}")
@@ -36,7 +40,3 @@ for i in range(1,t+1):
     else:
         height_append(g,b)
     print(height_order)
-    if len(height_order) == n:
-        print("Yes")
-    else:
-        print("No")
