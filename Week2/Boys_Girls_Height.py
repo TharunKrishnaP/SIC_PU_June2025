@@ -1,5 +1,5 @@
 #Boys Girls Height
-t = int(input("Enter no. of test cases: "))
+test_cases = int(input("Enter no. of test cases: "))
 def height_append(a,b):
     i = j = k = 0
     while (i<len(a) or j<len(b)) and k<class_strength:
@@ -26,7 +26,7 @@ def height_append(a,b):
     else:
         print("No")
 
-for i in range(1,t+1):
+for i in range(1,test_cases+1):
     print(f"Test case {i}")
     class_strength = int(input("Class strength: "))
     print(f" Boys = Girls = {class_strength//2}")
