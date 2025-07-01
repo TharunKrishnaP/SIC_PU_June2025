@@ -9,15 +9,15 @@ def height_append(a,b):
         else:
             last = height_order[-1]
             if k%2==0:
-                while i < len(a) and a[i] <= last:
+                while i < len(a) and a[i] < last:
                     i += 1
-                if i <len(a) and a[i] > last:
+                if i <len(a) and a[i] >= last:
                     height_order.append(a[i])
                     i += 1
             elif k%2!=0:
-                while j < len(b) and b[j] <= last:
+                while j < len(b) and b[j] < last:
                     j += 1
-                if j<len(b) and b[j] > last:
+                if j<len(b) and b[j] >= last:
                     height_order.append(b[j])
                     j += 1
             k +=1
