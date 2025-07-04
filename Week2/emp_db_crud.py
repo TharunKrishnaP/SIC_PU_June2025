@@ -1,10 +1,10 @@
 import pymysql
 
-def connect_db():
+def connect_db(pass_word,data_base):
     connection = None
     try:
         connection = pymysql.Connect(host="localhost", user="root",\
-                                 password="Bumblebee",database="EMP_DB",port=3306,charset="utf8")
+                                 password=pass_word,database=data_base,port=3306,charset="utf8")
         print("Database Connected")
     except:
         print("Connection failed")
@@ -19,7 +19,7 @@ def disconnect_db(connection):
 
 def create_db():
     query = "create database IF NOT EXISTS emp_db"
-    connection = connect_db()
+    connection = connect_db(pass_word,data_base)
     try:
         cursor = connection.cursor()
         cursor.execute(query)
@@ -31,9 +31,9 @@ def create_db():
 
 def create_table():
     query = "create table IF NOT EXISTS employee(id int primary key auto_increment, name varchar(30) not null\
-        designation varchar(30), phone_no bigint unique, salary float, commission float default(0) \
-            years_of_exp tinyint, technology varchar(30) not null)"
-    connection = connect_db()
+        designation varchar(30), phone_number bigint unique, salary float, commission float default(0) \
+            years_of_experience tinyint, technology varchar(30) not null)"
+    connection = connect_db(pass_word,data_base)
     try:
         cursor = connection.cursor()
         cursor.execute(query)
@@ -45,7 +45,7 @@ def create_table():
 
 def read_all_employees():
     query = "select * from employee"
-    connection = connect_db()
+    connection = connect_db(pass_word,data_base)
     try:
         cursor = connection.cursor()
         cursor.execute(query)
@@ -57,3 +57,54 @@ def read_all_employees():
         disconnect_db(connection)
     except:
         print("Failed to retrieve")
+pass_word = input("Enter password: ")
+data_base = input("Enter database name: ")
+
+
+def read_employee_details():
+    name = input("Name: ")
+    designation = input("Designation: ")
+    phone_number = input("Phone number: ")
+    salary = float(input("Salary: "))
+    commission = float(input("Commission: "))
+    years_of_experience = int(input("Years of Experience: "))
+    technology = input("Technology: ")
+    return name, designation, phone_number, salary, commission, years_of_experience, technology
+
+def commit(connection):
+    input_str = input("Commit? [y/n]").lower()
+    if input_str == "y":
+        connection.commit()
+        print("Changes committed")
+
+def insert_employee():
+    details = read_employee_details()
+    query = "INSERT INTO EMPLOYEE (NAME,DESIGNATION,PHONE_NUMBER,SALARY,COMMISSION,YEARS_OF_EXPERIENCE,TECHNOLOGY) VALUES(%s, %s, %s, %s, %s, %s,%s)"
+    connection = connect_db(pass_word,data_base)
+    try:
+        cursor = connection.cursor()
+        cursor.execute(query,details)
+        commit(connection)
+        cursor.close()
+        disconnect_db(connection)
+        print("Insertion successful")
+    except:
+        print("Insertion failed")
+
+def delete_employee():
+    id = input("Enter id: ")
+    query = "delete from employee where id = %s"
+    connection = connect_db(pass_word,data_base)
+    try:
+        cursor = connection.cursor()
+        cursor.execute(query,id)
+        commit(connection)
+        cursor.close()
+        disconnect_db(connection)
+        
+    except:
+        print("Deletion failed")
+
+create_table()
+delete_employee()
+insert_employee()
