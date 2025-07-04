@@ -92,11 +92,11 @@ def insert_employee():
         print("Insertion failed")
 
 def delete_employee():
-    id = input("Enter id: ")
     query = "delete from employee where id = %s"
     connection = connect_db(pass_word,data_base)
     try:
         cursor = connection.cursor()
+        id = input("Enter id: ")
         cursor.execute(query,id)
         commit(connection)
         cursor.close()
