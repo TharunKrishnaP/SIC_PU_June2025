@@ -25,21 +25,15 @@ class SLL:
             self.insert_node_rear(node)
         return self
     
-    def display(self):
-        temp = self.front
-        while temp:
-            print(temp.data, end=" -> " if temp.link else "")
-            temp = temp.link
-    
     def is_sll_converge(self, sll1, sll2):
-        nodes = set()
+        visited_nodes = set()
         a = sll1.front
         while a:
-            nodes.add(a.data)
+            visited_nodes.add(a.data)
             a = a.link
         b = sll2.front
         while b:
-            if b.data in nodes:
+            if b.data in visited_nodes:
                 return "Yes"
             b = b.link
         return "No"
