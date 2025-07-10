@@ -5,22 +5,29 @@ class Node:
         self.right = None
     
 class BST:
-    def insert_node(self):
-        data = int(input("Enter data: "))
-        new_node = Node(data)
+    def __init__(self):
+        self.root = None
+    
+    def insert_node(self,data):
+        new_node = Node(data) # create a new Node object
+        if self.root == None: # check if the tree is empty
+            self.root = new_node
+            return
         temp1 = self.root
-        temp2 = None
-        while temp1 != None:
-            temp2 = temp1
-            if new_node.data < temp1.data:
+        while True:
+            if data < temp1.data:
+                if temp1.left is None:
+                    temp1.left = new_node
+                    return
                 temp1 = temp1.left
             else:
+                if temp1.right is None:
+                    temp1.right = new_node
+                    return
                 temp1 = temp1.right
-        if new_node.data < temp2.data:
-            temp2.left = new_node
-        else:
-            temp2.right = new_node
-        
+
+
+
     def in_order_traversal(self,temp):
         if temp == None:
             print("Empty tree")
@@ -67,7 +74,9 @@ class Menu:
     
     def menu(self,bst):
         match self.choice:
-            case 1: bst.insert_node()
+            case 1: 
+                data = int(input("Enter value of node: "))
+                bst.insert_node(data)
             case 2: 
                 if self.is_tree_empty(bst):
                     return
