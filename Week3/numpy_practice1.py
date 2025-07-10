@@ -1,0 +1,11 @@
+import numpy as np
+array1 = np.zeros(3)
+print("Array 1: ",array1)
+array2 = np.zeros((1, 4))
+array3 = np.ones((2, 5))
+print("Array 2:\n",array2)
+print("Array 3: \n",array3)
+print(f"Array 1 : Element [0] : {array1[0]}, Element[2] : {array1[2]}")
+print(f"Array 2 : Element [2][0] : {array2[0][0]},Element [0][3] : {array2[0][3]}")
+print(f"Array 3 : Element [1][0] : {array3[1][0]},Element [1][3] : {array3[1][3]}")
+print(f"Matrix shape of array3: ",array3.shape)
